@@ -17,16 +17,21 @@
             src: url("fonts/PPMori-Book.otf") format("opentype");
         }
 
+        @font-face {
+            font-family: "PPMori-Extra-Light";
+            src: url("fonts/PPMori-Extralight.otf") format("opentype");
+        }
+
         :root {
             --brown: #221B15;
             --blue: #9EB6FF;
-            --paragraph-font-size: 24px;
-            --link-font-size: 16px;
-            --h1-font-size: 60px;
-            --margin-sides: 50px;
-            --margin-top: 30px;
+            --paragraph-font-size: 18px;
+            --link-font-size: 14px;
+            --h1-font-size: 50px;
+            --margin-sides: 20px;
+            --margin-top: 18px;
             --grid-margin-bottom: 50px;
-            --gap: 20px;
+            --gap: 50px;
             --link-margin-right: 50px;
         }
 
@@ -49,11 +54,16 @@
             font-size: var(--h1-font-size);
             line-height: var(--h1-font-size);
             font-family: "PPMori-Book", sans-serif;
+            max-width: 600px;
         }
 
         a {
             font-size: var(--link-font-size);
             color: var(--blue);
+        }
+
+        a.paragraph-link-size {
+            font-size: var(--paragraph-font-size);
         }
 
         a.link-margin-right {
@@ -74,7 +84,7 @@
             justify-content: space-between;
         }
 
-        .span-5.logo-parent {
+        .logo-parent {
             position: relative;
         }
 
@@ -116,19 +126,18 @@
         }
 
         .centered {
-            position: absolute;
-            height: calc(100vh - var(--margin-top) * 2);
+            height: calc(100vh - var(--margin-top) * 6);
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding-top: var(--margin-top);
+            padding-top: calc(var(--margin-top) * 4);
         }
 
         img {
             position: relative;
             width: 100%;
             height: auto;
-        }
+        }        
     </style>
 </head>
 
@@ -141,7 +150,7 @@
 
         <div class="centered">
             <div class="grid">
-                <div class="span-5 logo-parent">
+                <div class="span-6 logo-parent">
                     <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="130" height="123" viewBox="0 0 130 123"
                         fill="none">
                         <path
@@ -150,22 +159,22 @@
                     </svg>
                 </div>
                 <div class="span-6">
-                    <h1>Molly Lawrence is<br> a graphic designer currently based in<br> Portland, Maine.</h1>
+                    <h1>Molly Lawrence is a graphic designer currently based in Portland, Maine.</h1>
                 </div>
             </div>
 
             <div class="grid double-grid-margin-bottom">
-                <div class="span-5"></div>
-                <div class="span-5">
-                    <a class="link-margin-right" href="https://www.instagram.com/factoryhens/">instagram ↗</a>
-                    <a class="link-margin-right" href="mailto:molly@mollylawrence.art">email ↗</a>
-                    <a href="pdf/testdownload.pdf" download>CV ↗</a>
+                <div class="span-6"></div>
+                <div class="span-6">
+                    <a class="link-margin-right paragraph-link-size" href="https://www.instagram.com/factoryhens/">instagram ↗</a>
+                    <a class="link-margin-right paragraph-link-size" href="mailto:molly@mollylawrence.art">email ↗</a>
+                    <a class="paragraph-link-size" href="pdf/Molly-Lawrence_Graphic-Designer_CV-2025.pdf" download>CV ↗</a>
                 </div>
             </div>
 
             <div class="grid">
-                <div class="span-5"></div>
-                <div class="span-5">
+                <div class="span-6"></div>
+                <div class="span-6">
                     <p>full website coming soon</p>
                 </div>
             </div>
