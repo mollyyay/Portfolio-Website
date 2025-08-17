@@ -7,6 +7,7 @@
     <title>Molly Lawrence | Graphic Designer</title>
     <link rel="icon" type="image/svg+xml" href="svg/favicon.svg">
     <style>
+        /* PPMORI */
         @font-face {
             font-family: "PPMori-Regular";
             src: url("fonts/PPMori-Regular.otf") format("opentype");
@@ -20,6 +21,12 @@
         @font-face {
             font-family: "PPMori-Extra-Light";
             src: url("fonts/PPMori-Extralight.otf") format("opentype");
+        }
+
+        /* SATOSHI */
+        @font-face {
+            font-family: "Satoshi-Regular";
+            src: url("fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Regular.otf") format("opentype");
         }
 
         :root {
@@ -39,7 +46,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "PPMori-Regular", sans-serif;
+            font-family: "Satoshi-Regular", sans-serif;
         }
 
         p {
@@ -53,8 +60,8 @@
         h1 {
             font-size: var(--h1-font-size);
             line-height: var(--h1-font-size);
-            font-family: "PPMori-Book", sans-serif;
-            max-width: 600px;
+            font-family: "Satoshi-Regular", sans-serif;
+            max-width: 500px;
             letter-spacing: 1px;
         }
 
@@ -130,8 +137,8 @@
             height: calc(100vh - var(--margin-top) * 6);
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            padding-top: calc(var(--margin-top) * 4);
+            /* justify-content: center; */
+            padding-top: calc(var(--margin-top) * 12);
         }
 
         img {
@@ -150,7 +157,7 @@
         </div>
 
         <div class="centered">
-            <div class="grid">
+            <div class="grid double-grid-margin-bottom">
                 <div class="span-6 logo-parent">
                     <svg class="logo" xmlns="http://www.w3.org/2000/svg" width="130" height="123" viewBox="0 0 130 123"
                         fill="none">
